@@ -15,14 +15,14 @@ console.log('Type b to brrring the bell');
 stdin.on('data', (key) => {
   // If key is that of keycode ctrl+c, exit process
   if (key === '\u0003') {
-    console.log("Thanks for using me, ciao!")
+    console.log("Thanks for using me, ciao!");
     process.exit();
   }
   if (key === 'b') beep();
 
   let time = Number(key);
   if (isNaN(time) || time < 0) return;
-  console.log(`Setting timer for ${time} seconds...`)
+  console.log(`Setting timer for ${time} seconds...`);
   setTimeout(() => beep(), time * 1000);
 });
 
